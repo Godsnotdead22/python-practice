@@ -11,6 +11,14 @@ potions = 3
 potions_healing = 25
 player_xp = 0
 xp_reward = 25
+#WEAPONS INVENOTRY
+weapons = {
+  "Rusty Sword": 20
+}
+
+equipted_weapon = "Rusty Sword"
+
+player_attack = weapons[equipted_weapon]
 
 while True:
 
@@ -19,7 +27,8 @@ while True:
     print("1. Fight Monster")
     print("2. Visit Sword Shop")
     print("3. View Stats")
-    print("4. Quit Game")
+    print("4. Weapon Inventory")
+    print("5. Quit Game")
 
     choice = input("Choose An Option: ")
 
@@ -107,11 +116,90 @@ while True:
             print("\nYou Earned", xp_reward, "XP!")
             print("Total XP:", player_xp)
 
+    
     # SWORD SHOP
     elif choice == "2":
 
-        print("\nWelcome To The Sword Shop!")
-        print("More Shop Features Coming Soon!")
+        print("\n===== SWORD SHOP =====")
+
+        print("Your XP:", player_xp)
+
+        print("\n1. Handmade Sword - 25 XP - 30 Damage")
+        print("2. Battle Sword - 100 XP - 40 Damage")
+        print("3. Knight Sword - 250 XP - 45 Damage")
+        print("4. Kings Sword - 500 XP - 60 Damage")
+        print("5. Exit Shop")
+
+        shop_choice = input("\nWhat Would You Like To Purchase? ")
+
+        # HANDMADE SWORD
+        if shop_choice == "1":
+
+            if player_xp >= 25:
+
+                player_xp -= 25
+
+                weapons["Handmade Sword"] = 30
+
+                print("\nYou Purchased The Handmade Sword!")
+                print("Your XP:", player_xp)
+
+            else:
+                print("\nYou Do Not Have Enough XP!")
+
+        # BATTLE SWORD
+        elif shop_choice == "2":
+
+            if player_xp >= 100:
+
+                player_xp -= 100
+
+                weapons["Battle Sword"] = 40
+
+                print("\nYou Purchased The Battle Sword!")
+                print("Your XP:", player_xp)
+
+            else:
+                print("\nYou Do Not Have Enough XP!")
+
+        # KNIGHT SWORD
+        elif shop_choice == "3":
+
+            if player_xp >= 250:
+
+                player_xp -= 250
+
+                weapons["Knight Sword"] = 45
+
+                print("\nYou Purchased The Knight Sword!")
+                print("Your XP:", player_xp)
+
+            else:
+                print("\nYou Do Not Have Enough XP!")
+
+        # KINGS SWORD
+        elif shop_choice == "4":
+
+            if player_xp >= 500:
+
+                player_xp -= 500
+
+                weapons["Kings Sword"] = 60
+
+                print("\nYou Purchased The Kings Sword!")
+                print("Your XP:", player_xp)
+
+            else:
+                print("\nYou Do Not Have Enough XP!")
+
+        # EXIT SHOP
+        elif shop_choice == "5":
+
+            print("\nLeaving Sword Shop...")
+
+        else:
+            print("\nInvalid Shop Choice!")
+
 
     # PLAYER STATS
     elif choice == "3":
@@ -122,9 +210,20 @@ while True:
         print("Player Attack:", player_attack)
         print("Player XP:", player_xp)
         print("Healing Potions:", potions)
+        print("Current Sword:", equipted_weapon)
+
+    # WEAPON INVENTORY
+    elif choice == "4":
+
+      print("\n===== WEAPON INVENTORY =====")
+
+      for weapon, damage in weapons.items():
+
+        print(weapon, "-", damage, "Damage")
 
     # QUIT GAME
-    elif choice == "4":
+      
+    elif choice == "5":
 
         print("\nThanks For Playing Monster Slayer!")
         break
