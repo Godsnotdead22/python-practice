@@ -7,10 +7,18 @@ print("Welcome To Monster Slayer\n")
 player_name = input("Whats Your Name Knight: ")
 player_health = 100
 player_attack = 20
-potions = 3
-potions_healing = 25
 player_xp = 0
 xp_reward = 25
+#POTION INVENTORY
+potions = {
+  "Small Health Potion": 3,
+  "Large Health Potion": 0,
+  "Strength Potion": 0,
+  "Shield Potion": 0
+}
+#POTION EFFECTS
+strength_attacks_left = 0
+sheild_potion_hits_left = 0
 #WEAPONS INVENOTRY
 weapons = {
   "Rusty Sword": 20
