@@ -10,6 +10,7 @@ No setup needed. Each badge opens the file in a free online Python editor and ru
 | --- | --- |
 | [`main.py`](./main.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Godsnotdead22/python-practice/main/main.py) |
 | [`untitled1.py`](./untitled1.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Godsnotdead22/python-practice/main/untitled1.py) |
+| [`untitled2.py`](./untitled2.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Godsnotdead22/python-practice/main/untitled2.py) |
 
 Made with [pythoncompiler.io](https://pythoncompiler.io/?utm_source=github&utm_medium=practice-repo) - the free online Python compiler.
 <!-- /pythoncompiler:files -->
